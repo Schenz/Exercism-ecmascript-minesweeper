@@ -12,11 +12,11 @@ describe('Minesweeper()', () => {
     expect(minesweeper.annotate([])).toEqual([]);
   });
 
-  xtest('handles no columns', () => {
+  test('handles no columns', () => {
     expect(minesweeper.annotate([''])).toEqual(['']);
   });
 
-  xtest('handles no mines', () => {
+  test('handles no mines', () => {
     const input = [
       '   ',
       '   ',
@@ -30,7 +30,7 @@ describe('Minesweeper()', () => {
     expect(minesweeper.annotate(input)).toEqual(expected);
   });
 
-  xtest('handles board with only mines', () => {
+  test('handles board with only mines', () => {
     const input = [
       '***',
       '***',
@@ -44,7 +44,7 @@ describe('Minesweeper()', () => {
     expect(minesweeper.annotate(input)).toEqual(expected);
   });
 
-  xtest('handles mine surrounded by spaces', () => {
+  test('handles mine surrounded by spaces', () => {
     const input = [
       '   ',
       ' * ',
